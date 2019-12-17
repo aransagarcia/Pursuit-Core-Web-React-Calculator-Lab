@@ -3,13 +3,13 @@ import React from 'react'
 
 function Buttons(props) {
 
-    const { ClickValue, HandleOperator, solveEquation, display, resetCalculator } = props
+    const { ClickValue, HandleOperator, solveEquation, display, resetCalculator, addToDisplay } = props
     return (
         <div className='mainContainer'>
           
 
 
-            <button className="DisplayNumber"> {display} </button>
+            <input className="DisplayNumber" input = {this.state.display}> {display} </input>
 
             <button className='button orange'
             onClick={resetCalculator} > AC </button>
@@ -20,7 +20,7 @@ function Buttons(props) {
 
             <button className='button orange' onClick={HandleOperator} value='divide'> / </button>
 
-            <button className='button' onClick={ClickValue} value='7'> 7</button>
+            <button className='button' onClick={addToDisplay} value='7'> 7</button>
 
             <button className='button' onClick={ClickValue}  value='8'> 8</button>
 
